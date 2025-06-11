@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人文章网站</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="site-title">个人文章</h1>
+            <p class="site-subtitle">思考与记录</p>
+        </header>
+        
+        <nav class="nav">
+            <button class="nav-btn active" onclick="showHome()">首页</button>
+            <button class="nav-btn" onclick="showArticles()">文章</button>
+        </nav>
+        
+        <main class="main">
+            <div id="home-content" class="content-section">
+                <div class="welcome">
+                    <h2>欢迎来到我的个人网站</h2>
+                    <p>这里记录着我的思考、学习和生活感悟。</p>
+                    <p>网站采用极简设计，专注于内容本身。</p>
+                </div>
+            </div>
+            
+            <div id="articles-content" class="content-section hidden">
+                <div class="articles-list">
+                    <h2>文章列表</h2>
+                    <div id="article-list"></div>
+                </div>
+                <div class="article-view hidden" id="article-view">
+                    <button class="back-btn" onclick="showArticlesList()">← 返回文章列表</button>
+                    <article id="article-content"></article>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2024 个人文章网站. 简约而不简单.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
